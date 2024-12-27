@@ -1,10 +1,10 @@
+import Scraper from "@/components/ui/ScrapperComponents";
 import React from "react";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
-      Home Page <br />
-      <button className="bg-red-300 p-4">Add To Cart</button>
-    </main>
+    <Scraper.Root>
+      <Scraper.FooterNote />
+    </Scraper.Root>
   );
 }
