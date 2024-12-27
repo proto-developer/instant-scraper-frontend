@@ -1,8 +1,8 @@
 import RecentRequestProps from "@/types/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
-import LogoutButton from "./LogoutButton";
-import StartNewScrapBtn from "./StartNewScrapBtn";
+import LogoutButton from "../ui/LogoutButton";
+import StartNewScrapBtn from "../ui/StartNewScrapBtn";
 
 const Root = ({ children }: { children: React.ReactNode }) => {
   return (
