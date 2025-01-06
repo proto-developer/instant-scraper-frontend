@@ -1,67 +1,72 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-
-
 #recentRequestsContainer .requestsScollableDiv::-webkit-scrollbar {
-  width: 2px !important;
-  border-radius: 100% !important;
-  background-color: #e5e5e585 !important;
+    width: 2px !important;
+    border-radius: 100% !important;
+    background-color: #e5e5e585 !important;
 }
 
 #recentRequestsContainer .requestsScollableDiv::-webkit-scrollbar-thumb {
-  background-color: #3a3a3c;
-  border-radius: 100% !important;
+    background-color: #3a3a3c;
+    border-radius: 100% !important;
 }
 
-.leftBox{
-  background-color: #1C1C1E;
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  float: left;
+.leftBox {
+    background-color: #1C1C1E;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    float: left;
 }
 
-.rightBox{
-  /* margin-left: 5%; */
-  background-color: #2C2C2C;
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10%;
+.rightBox {
+    /* margin-left: 5%; */
+    background-color: #2C2C2C;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
 }
 
-.continueButton{
-  background: 'linear-gradient(to right, #0A84FF, #5E5CE6)', 
+.continueButton {
+    background: 'linear-gradient(to right, #0A84FF, #5E5CE6)',
 }
 
 .m_f1cb205a {
-  background-color: #1C1C1E;
+    background-color: #1C1C1E;
 }
 
+.buttonHovered:hover {
+    background: linear-gradient(to right, #5E5CE6, #0A84FF);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
 
 .subscriptionPackages:hover {
-  background: linear-gradient(to right, #0A84FF, #5E5CE6);
-  transition: transform 0.3s ease, background 0.3s ease;
-  transform: scale(1.07) translateY(2px); 
-  border: #D3D3D3 4px solid;
+    background: linear-gradient(to right, #0A84FF, #5E5CE6);
+    transition: transform 0.3s ease, background 0.3s ease;
+    transform: scale(1.07) translateY(2px);
+    border: #D3D3D3 4px solid;
 }
 
+
 /* Apply styles to text elements inside .subscriptionPackages on hover */
+
 .subscriptionPackages:hover .content h3,
 .subscriptionPackages:hover .content h1,
 .subscriptionPackages:hover .content p,
 .subscriptionPackages:hover .content ul li,
 .subscriptionPackages:hover .content ul li svg {
-  color: #ffffff;
+    color: #ffffff;
 }
 
+
 /* Apply styles to button inside .subscriptionPackages on hover */
+
 .subscriptionPackages:hover button {
-  background-color: #ffffff;
-  color: black;
+    background-color: #ffffff;
+    color: black;
 }

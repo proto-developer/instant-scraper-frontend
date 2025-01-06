@@ -7,50 +7,50 @@ const ProfileInformation = () => {
         <>
 
 
-            <div className="mt-[11%] ">
+            <div className="mt-[10.5%] ">
 
             <h4 className="text-xl font-semibold mt-[2] mb-[5%]"> Login </h4>
 
             <h4 className='text-sm mb-3'>Old Password</h4>
-            <Input placeholder="" styles={{
+            <Input placeholder="" type='password' styles={{
                 input: {
                     backgroundColor: "#282829",
                     border: "none",
                     color: "#FFF",
                     borderRadius: "0.5rem",
-                    padding: "3.5% 3%",
+                    padding: "2.5% 3%",
                 }
             }} />
 
             <div className="w-[48%] float-left mr-5 ">
             <h4 className='text-sm mt-5 mb-3 '>New Password</h4>
-            <Input placeholder="" styles={{
+            <Input placeholder="" type='password' styles={{
                 input: {
                     backgroundColor: "#282829",
                     border: "none",
                     color: "#FFF",
                     borderRadius: "0.5rem",
-                    padding: "7% 5%",                
+                    padding: "5% 5%",                
                 }
             }} />
             </div>
 
-            <div className="w-[48%] flex flex-col">
+            <div className="min-w-[48%] flex flex-col">
 
             <h4 className='text-sm mt-5 mb-3 '>Confirm Password</h4>
-            <Input placeholder="" styles={{
+            <Input placeholder="" type='password' styles={{
                 input: {
                     backgroundColor: "#282829",
                     border: "none",
                     color: "#FFF",
                     borderRadius: "0.5rem",
-                    padding: "7% 5%",
+                    padding: "5% 5%",
                 }
             }} />
             </div>
 
 
-            <Button 
+            {/* <Button 
               type="submit" 
               radius="xl" 
               className='continueButton mt-10'
@@ -67,7 +67,17 @@ const ProfileInformation = () => {
               }}
             >
               Update Password
-            </Button>
+            </Button> */}
+
+            <button 
+              type="submit" 
+              className='buttonHovered text-[14px] font-semibold bg-primaryGradient p-[10px_16px] rounded-full flex items-center gap-[8px] justify-center mt-10'
+              
+            >
+              Update Password
+            </button>
+              
+
 
 
             </div>

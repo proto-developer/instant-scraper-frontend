@@ -26,7 +26,7 @@ const AccountSettingSidebar = () => {
             <h4 className="text-xl mt-[2]"> My Account </h4>
           </div>
 
-          <div className="title w-[100%] h-[30%] m-[10%] ml-[22%]">
+          <div className="title w-[90%] h-[30%] m-[10%] ml-[22%]">
             <ul className="justify-middle text-[#6F767E]">
               {["Basics", "Account", "Notifications", "Payment"].map(
                 (option) => (

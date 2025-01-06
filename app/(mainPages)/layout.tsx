@@ -1,5 +1,6 @@
 import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
+import Link from "next/link";
 
 const RecenetRequestsData = [
   {
@@ -33,7 +34,7 @@ export default function RootLayout({
     <>
       <div className="flex items-center bg-black text-white">
         <Sidebar.Root>
-          <Image src="/logo.svg" alt="logo" width={170} height={40} />
+         <Link href={"/"}> <Image src="/logo.svg" alt="logo" width={170} height={40} /> </Link> 
           <Sidebar.RecentRequestsContainer>
             {RecenetRequestsData.map((request) => (
               <Sidebar.RecentRequestCard

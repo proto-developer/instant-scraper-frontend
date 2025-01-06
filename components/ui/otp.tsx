@@ -61,7 +61,7 @@ import {
     </div>
 
 
-    <Button 
+    {/* <Button 
   type="submit" 
   radius="xl" 
   className='continueButton'
@@ -80,8 +80,15 @@ import {
   }}
 >
   Continue
-</Button>
+</Button> */}
 
+<button 
+              type="submit" 
+              className='buttonHovered text-white text-[14px] font-semibold bg-primaryGradient p-[10px_16px] rounded-full flex items-center gap-[8px] justify-center mt-12'
+              
+            >
+              Continue
+            </button>
 
          
           </Stack>

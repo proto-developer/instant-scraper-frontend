@@ -21,7 +21,7 @@ const RecentRequestsContainer = ({
       id="recentRequestsContainer"
       className="flex flex-col gap-[18px] flex-1 max-h-[calc(110dvh-490px)]"
     >
-      <h2 className="text-[18px] font-semibold">Recent Requests</h2>
+      <h2 className="text-[18px] ml-4">Recent Requests</h2>
       <div className="flex flex-col gap-[6px] overflow-auto requestsScollableDiv">
         {children}
       </div>
@@ -57,14 +57,14 @@ const SidebarFooter = () => {
       </div>
       <Link
         href={`/my-account`}
-        className="flex items-center gap-[12px] p-[12px_16px] hover:bg-gray-700 rounded-full"
+        className="flex items-center gap-[12px] p-[12px_16px] hover:bg-[#282829] rounded-full"
       >
         <Image src="/person.png" alt="logo" width={20} height={20} />
         <p className="text-[14px] text-white">My Account</p>
       </Link>
       <Link
         href={`/subscription-plan`}
-        className="flex items-center gap-[12px] p-[12px_16px] hover:bg-gray-700 rounded-full"
+        className="flex items-center gap-[12px] p-[12px_16px] hover:bg-[#282829] rounded-full"
       >
         <Image src="/subscription.png" alt="logo" width={20} height={20} />
         <p className="text-[14px] text-white">Subscription</p>

@@ -8,7 +8,7 @@ const ProfileInformation = () => {
   const [isCheckedSecond, setIsCheckedSecond] = useState(true);
 
   return (
-    <div className="mt-[11%]">
+    <div className="mt-[10.5%]">
       <h4 className="text-xl font-semibold mt-[2] mb-[5%]">Notifications</h4>
 
       <div className="flex justify-between mt-10 mb-5">
@@ -19,9 +19,12 @@ const ProfileInformation = () => {
           styles={{
             track: {
               backgroundColor: isCheckedFirst ? '#2A85FF' : '#565656', 
+              border: "none" 
             },
             thumb: {
                 backgroundColor: isCheckedFirst ? '#fff' : '#000', 
+              border: "none" 
+
             },
           }}
         />
@@ -36,10 +39,13 @@ const ProfileInformation = () => {
           onChange={(event) => setIsCheckedSecond(event.currentTarget.checked)}
           styles={{
             track: {
-              backgroundColor: isCheckedSecond ? '#2A85FF' : '#565656', 
+              backgroundColor: isCheckedSecond ? '#2A85FF' : '#565656',
+              border: "none" 
             },
             thumb: {
                 backgroundColor: isCheckedSecond ? '#fff' : '#000', 
+              border: "none" 
+
             },
           }}
         />

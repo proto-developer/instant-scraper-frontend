@@ -19,7 +19,7 @@ const Home = () => {
                                     color: "#FFF",
                                     marginBottom: "2%",
                                     borderRadius: "0.5rem",
-                                    padding: "3% 2%",
+                                    padding: "2.5% 2%",
                                 },
                             }}
                         />
@@ -32,7 +32,7 @@ const Home = () => {
                                     marginBottom: "2%",
                                     color: "#FFF",
                                     borderRadius: "0.5rem",
-                                    padding: "3% 2%",
+                                    padding: "2.5% 2%",
                                 },
                             }}
                         />
@@ -42,16 +42,16 @@ const Home = () => {
                             styles={{
                                 input: {
                                     backgroundColor: "#282829",
-                                    marginBottom: "2%",
+                                    
                                     color: "#FFF",
                                     borderRadius: "0.5rem",
-                                    padding: "3% 2%",
+                                    padding: "2.5% 2%",
                                 },
                             }}
                         />
 
                         <div className="w-[100%] flex justify-end">
-                            <Button
+                            {/* <Button
                                 type="submit"
                                 radius="xl"
                                 styles={{
@@ -71,7 +71,15 @@ const Home = () => {
                                 }}
                             >
                                 Start Scrapping
-                            </Button>
+                            </Button> */}
+
+                            <button 
+              type="submit" 
+              className='buttonHovered text-[15px] font-semibold bg-primaryGradient p-[12px_16px] rounded-full flex items-center gap-[2px] justify-center mt-10'
+              
+            >
+              Start Scrapping
+            </button>
                         </div>
                     </div>
                 </div>

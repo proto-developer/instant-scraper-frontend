@@ -7,7 +7,7 @@ const ProfileInformation = () => {
         <>
 
 
-            <div className="mt-[11%] ">
+            <div className="mt-[10.5%] ">
 
             <h4 className="text-xl font-semibold mt-[2] mb-[5%]"> Profile Information </h4>
 
@@ -18,7 +18,7 @@ const ProfileInformation = () => {
                     border: "none",
                     color: "#FFF",
                     borderRadius: "0.5rem",
-                    padding: "3.5% 3%",
+                    padding: "2.5% 3%",
                 }
             }} />
 
@@ -30,12 +30,12 @@ const ProfileInformation = () => {
                     border: "none",
                     color: "#FFF",
                     borderRadius: "0.5rem",
-                    padding: "3.5% 3%",
+                    padding: "2.5% 3%",
                 }
             }} />
 
 
-            <Button 
+            {/* <Button 
               type="submit" 
               radius="xl" 
               className='continueButton mt-10'
@@ -52,7 +52,15 @@ const ProfileInformation = () => {
               }}
             >
               Save Changes
-            </Button>
+            </Button> */}
+
+            <button 
+              type="submit" 
+              className='buttonHovered text-[14px] font-semibold bg-primaryGradient p-[10px_16px] rounded-full flex items-center gap-[8px] justify-center mt-10'
+              
+            >
+              Save Changes
+            </button>
 
 
             </div>
