@@ -1,6 +1,8 @@
 import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
-
+import Home from "@/components/ui/home"
+import Subscription from "@/components/ui/subscription";
+import ProcessingLogos from "@/components/ui/processingData";
 const RecenetRequestsData = [
   {
     requestId: "1",
@@ -47,7 +49,12 @@ export default function RootLayout({
         </Sidebar.Root>
 
         <div className="m-[10px] bg-darkLight border border-grayBorder rounded-[16px] flex-1 h-[calc(100dvh-20px)]">
-          {children}
+        
+        <ProcessingLogos.Analyzing data="tick"/>
+        <ProcessingLogos.ScrappingData data="caution"/>
+        <ProcessingLogos.GeneratingOutput data="processing"/>
+
+
         </div>
       </div>
     </>

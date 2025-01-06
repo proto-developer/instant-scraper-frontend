@@ -19,7 +19,7 @@ const RecentRequestsContainer = ({
   return (
     <div
       id="recentRequestsContainer"
-      className="flex flex-col gap-[18px] flex-1 max-h-[calc(100dvh-490px)]"
+      className="flex flex-col gap-[18px] flex-1 max-h-[calc(110dvh-490px)]"
     >
       <h2 className="text-[18px] font-semibold">Recent Requests</h2>
       <div className="flex flex-col gap-[6px] overflow-auto requestsScollableDiv">
@@ -47,8 +47,8 @@ const RecentRequestCard: React.FC<RecentRequestProps> = ({
 
 const SidebarFooter = () => {
   return (
-    <div className="flex flex-col py-[32px] gap-[4px] w-full border-t border-grayBorder">
-      <div className="flex items-center justify-between gap-[12px] p-[12px_16px]">
+    <div className="flex flex-col py-[8px] gap-[4px] w-full border-t border-grayBorder">
+      <div className="flex items-center justify-between gap-[1px] p-[12px_16px]">
         <div className="flex items-center gap-[12px]">
           <Image src="/credits.png" alt="logo" width={20} height={20} />
           <p className="text-[14px] text-white">Credits</p>

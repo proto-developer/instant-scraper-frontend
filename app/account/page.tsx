@@ -1,5 +1,6 @@
 import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
+import AccountSettingSidebar from "@/components/ui/AccountEditSidebar";
 
 const RecenetRequestsData = [
   {
@@ -47,7 +48,7 @@ export default function RootLayout({
         </Sidebar.Root>
 
         <div className="m-[10px] bg-darkLight border border-grayBorder rounded-[16px] flex-1 h-[calc(100dvh-20px)]">
-          {children}
+          <AccountSettingSidebar/>
         </div>
       </div>
     </>
