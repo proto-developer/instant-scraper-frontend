@@ -6,7 +6,8 @@ import { MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
-  variable: "--font-inter",
+  subsets: ['latin'], // Add the subsets you need, here we use 'latin'
+  variable: "--font-inter", // Continue using the variable if you need it
 });
 
 export const metadata: Metadata = {
