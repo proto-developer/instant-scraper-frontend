@@ -1,13 +1,17 @@
-import { Button, Input } from '@mantine/core';
+import { Input } from '@mantine/core';
 import ScrapperComponent from "./ScrapperComponents";
+import Image from 'next/image';
+import StartNewScrapBtn from './startScrappingButton';
 
 const Home = () => {
+
     return (
         <>
             <div className="w-[100%] h-full flex flex-col justify-between">
                 {/* Main Content */}
                 <div className="text-center flex-grow flex flex-col justify-center">
-                    <h1 className="text-4xl font-semibold"> Welcome to Scraper </h1>
+                    <h1 className="text-4xl font-semibold flex items-center justify-center"> Welcome to&nbsp;<Image src="/ScraperLogo.png" alt='scraperLogo' width={170} height={40}/> </h1>
+                    
                     <p className="text-sm font-normal mt-4 mb-8">Unleash AI to Fetch the Data You Need</p>
 
                     <div className="w-[75%] ml-auto mr-auto">
@@ -72,14 +76,8 @@ const Home = () => {
                             >
                                 Start Scrapping
                             </Button> */}
-
-                            <button 
-              type="submit" 
-              className='buttonHovered text-[15px] font-semibold bg-primaryGradient p-[12px_16px] rounded-full flex items-center gap-[2px] justify-center mt-10'
-              
-            >
-              Start Scrapping
-            </button>
+                        <StartNewScrapBtn/>
+                            
                         </div>
                     </div>
                 </div>

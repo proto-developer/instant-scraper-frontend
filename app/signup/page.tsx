@@ -6,7 +6,7 @@ import Crousel from "@/components/ui/carouel"
 const SignUpPage = () => {
   return(
     <>
-     <div className="leftBox   p-[32px_16px] h-screen flex flex-col items-center justify gap-[62px]">
+     <div className="leftBox   p-[32px_16px] h-screen flex flex-col flex-grow items-center justify-center gap-[62px]">
       
       <Image src="/logo.svg" alt="logo" width={170} height={40} />
 
