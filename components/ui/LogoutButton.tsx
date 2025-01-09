@@ -20,8 +20,8 @@ const LogoutButton = () => {
       onClick={handleLogout}
       className="flex items-center gap-[12px] p-[12px_16px] hover:bg-[#282829] rounded-full"
     >
-      <Image src="/logout.png" alt="logo" width={20} height={20} />
-      <p className="text-[14px] text-white">Log out</p>
+      <Image src="/logout.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5"/>
+      <p className="text-[21px] md:text-[14px] text-white">Log out</p>
     </button>
   );
 };

@@ -7,83 +7,39 @@ const Home = () => {
 
     return (
         <>
-            <div className="w-[100%] h-full flex flex-col justify-between">
+            <div className="w-full h-[90%] md:h-full flex flex-col justify-between px-4 sm:px-8">
                 {/* Main Content */}
                 <div className="text-center flex-grow flex flex-col justify-center">
-                    <h1 className="text-4xl font-semibold flex items-center justify-center"> Welcome to&nbsp;<Image src="/ScraperLogo.png" alt='scraperLogo' width={170} height={40}/> </h1>
+                    <h1 className="text-[44px] md:text-3xl font-semibold flex items-center justify-center flex-col sm:flex-row">
+                        Welcome to&nbsp;
+                        <Image src="/ScraperLogo.png" alt="scraperLogo" width={170} height={40} className="w-[200px] md:w-[170px]"/>
+                    </h1>
                     
-                    <p className="text-sm font-normal mt-4 mb-8">Unleash AI to Fetch the Data You Need</p>
+                    <p className="text-xl md:text-base font-normal mt-6 md:mt-4 mb-8">Unleash AI to Fetch the Data You Need</p>
 
-                    <div className="w-[75%] ml-auto mr-auto">
-                        <Input
-                            placeholder="Enter the target website URL here..."
-                            styles={{
-                                input: {
-                                    backgroundColor: "#282829",
-                                    color: "#FFF",
-                                    marginBottom: "2%",
-                                    borderRadius: "0.5rem",
-                                    padding: "2.5% 2%",
-                                },
-                            }}
-                        />
+                    <div className="w-full md:w-[90%] mx-auto">
 
-                        <Input
-                            placeholder="I want to scrape... (e.g., Product Name, Price)"
-                            styles={{
-                                input: {
-                                    backgroundColor: "#282829",
-                                    marginBottom: "2%",
-                                    color: "#FFF",
-                                    borderRadius: "0.5rem",
-                                    padding: "2.5% 2%",
-                                },
-                            }}
-                        />
 
-                        <Input
-                            placeholder="Enter the number of entries to extract (1 - 100 Limit)"
-                            styles={{
-                                input: {
-                                    backgroundColor: "#282829",
-                                    
-                                    color: "#FFF",
-                                    borderRadius: "0.5rem",
-                                    padding: "2.5% 2%",
-                                },
-                            }}
-                        />
+                    <input  placeholder="Enter the target website URL here..."
+                    className="bg-[#282829] border text-[16px] md:text-[14px] text-white mb-4 md:mb-3 rounded-lg p-4 md:p-2.5 md:px-4 w-full focus:border-blue-500 focus:outline-none"
+                    />
 
-                        <div className="w-[100%] flex justify-end">
-                            {/* <Button
-                                type="submit"
-                                radius="xl"
-                                styles={{
-                                    root: {
-                                        padding: "1.5% 2%",
-                                        width: "auto",
-                                        height: "auto",
-                                        background: 'linear-gradient(to right, #0A84FF, #5E5CE6)',
-                                        color: '#fff',
-                                        lineHeight: "normal",
-                                        border: 'none',
-                                        transition: 'background 0.3s ease',
-                                        hover: {
-                                            background: 'linear-gradient(to right, #5E5CE6, #0A84FF)',
-                                        },
-                                    },
-                                }}
-                            >
-                                Start Scrapping
-                            </Button> */}
-                        <StartNewScrapBtn/>
-                            
+                    <input  placeholder="I want to scrape... (e.g., Product Name, Price)"
+                    className="bg-[#282829] border text-[16px] md:text-[14px] text-white mb-4 md:mb-3 rounded-lg p-4 md:p-2.5 md:px-4 w-full focus:border-blue-500 focus:outline-none"
+                    />
+
+                    <input  placeholder="Enter the number of entries to extract (1 - 100 Limit)"
+                    className="bg-[#282829] border text-[16px] md:text-[14px] text-white  rounded-lg p-4 md:p-2.5 md:px-4 w-full focus:border-blue-500 focus:outline-none"
+                    />
+
+                        <div className="w-full flex justify-end ">
+                            <StartNewScrapBtn />
                         </div>
                     </div>
                 </div>
 
                 {/* Footer */}
-                <div className="w-[100%] text-center">
+                <div className="w-full text-center mt-0 md:mt-8">
                     <ScrapperComponent.FooterNote />
                 </div>
             </div>

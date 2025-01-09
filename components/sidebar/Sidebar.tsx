@@ -21,7 +21,7 @@ const RecentRequestsContainer = ({
       id="recentRequestsContainer"
       className="flex flex-col gap-[18px] flex-1 max-h-[calc(110dvh-490px)]"
     >
-      <h2 className="text-[18px] ml-4">Recent Requests</h2>
+      <h2 className="text-[21px] md:text-[18px] ml-4">Recent Requests</h2>
       <div className="flex flex-col gap-[6px] overflow-auto requestsScollableDiv">
         {children}
       </div>
@@ -40,34 +40,34 @@ const RecentRequestCard: React.FC<RecentRequestProps> = ({
       className="flex items-center gap-[12px] hover:bg-gray-700 p-[12px_16px] rounded-full"
     >
       <Image src="/recentChat.svg" alt="logo" width={20} height={20} />
-      <p className="text-[16px] text-white line-clamp-1">{requestTitle}</p>
+      <p className="text-[19px] md:text-[16px] text-white line-clamp-1">{requestTitle}</p>
     </Link>
   );
 };
 
 const SidebarFooter = () => {
   return (
-    <div className="flex flex-col py-[8px] gap-[4px] w-full border-t border-grayBorder">
+    <div className="flex flex-col py-[55px] md:py-[20px] gap-[14px] md:gap-[4px] w-full border-t border-grayBorder">
       <div className="flex items-center justify-between gap-[1px] p-[12px_16px]">
         <div className="flex items-center gap-[12px]">
-          <Image src="/credits.png" alt="logo" width={20} height={20} />
-          <p className="text-[14px] text-white">Credits</p>
+          <Image src="/credits.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5"/>
+          <p className="text-[21px] md:text-[14px]  text-white">Credits</p>
         </div>
-        <p className="text-[14px] text-white">10/10</p>
+        <p className="text-[21px] md:text-[14px] text-white">10/10</p>
       </div>
       <Link
         href={`/my-account`}
         className="flex items-center gap-[12px] p-[12px_16px] hover:bg-[#282829] rounded-full"
       >
-        <Image src="/person.png" alt="logo" width={20} height={20} />
-        <p className="text-[14px] text-white">My Account</p>
+        <Image src="/person.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5"/>
+        <p className="text-[21px] md:text-[14px] text-white">My Account</p>
       </Link>
       <Link
         href={`/subscription-plan`}
         className="flex items-center gap-[12px] p-[12px_16px] hover:bg-[#282829] rounded-full"
       >
-        <Image src="/subscription.png" alt="logo" width={20} height={20} />
-        <p className="text-[14px] text-white">Subscription</p>
+        <Image src="/subscription.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5" />
+        <p className="text-[21px] md:text-[14px] text-white">Subscription</p>
       </Link>
       <LogoutButton />
     </div>

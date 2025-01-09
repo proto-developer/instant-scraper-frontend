@@ -20,7 +20,7 @@ const InstructionInput = () => {
         >
             {/* Input Wrapper */}
             <div style={{ flex: 1 }}>
-                <Input
+                {/* <Input
                     placeholder="Write your instruction"
                     styles={{
                         input: {
@@ -35,7 +35,13 @@ const InstructionInput = () => {
                             width: "100%", // Full width within wrapper
                         },
                     }}
-                />
+                /> */}
+
+<input
+  placeholder="Write your instruction"
+  className="bg-[#282829] border-none focus:outline-none text-[14px] text-white  rounded-md  p-2 md:py-2 md:px-3.5 w-full"
+/>
+
             </div>
 
             {/* Button */}
@@ -44,8 +50,9 @@ const InstructionInput = () => {
                     background: "none",
                     border: "none",
                     cursor: "pointer",
-                    marginLeft: "1rem", // Adds space between Input and Button
-                    padding: 0, // Avoid extra spacing around the button
+                    marginLeft: "0.5rem", // Adds space between Input and Button
+                    padding: 0, 
+                    marginBottom: 0,
                 }}
             >
                 <Image
