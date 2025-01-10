@@ -4,6 +4,7 @@ import Image from 'next/image';
 const InstructionInput = () => {
     return (
         <div
+            className='mb-3'
             style={{
                 display: "flex",
                 alignItems: "center",
@@ -14,28 +15,13 @@ const InstructionInput = () => {
                 paddingLeft: "1%",
                 paddingRight: "0.5%", // Explicit padding for each side
                 border: "1px solid #ffffff",
-                marginBottom: "2%",
-                width: "100%", // Ensures full-width container
+                
+                width: "100%",
             }}
         >
             {/* Input Wrapper */}
             <div style={{ flex: 1 }}>
-                {/* <Input
-                    placeholder="Write your instruction"
-                    styles={{
-                        input: {
-                            backgroundColor: "transparent",
-                            color: "#FFF",
-                            border: "none",
-                            outline: "none",
-                            paddingTop: "10px",
-                            paddingBottom: "10px",
-                            paddingLeft: "12px",
-                            paddingRight: "12px", // Explicit padding for consistency
-                            width: "100%", // Full width within wrapper
-                        },
-                    }}
-                /> */}
+                
 
 <input
   placeholder="Write your instruction"

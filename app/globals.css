@@ -66,3 +66,14 @@
     background-color: #ffffff;
     color: black;
 }
+
+@media (max-width: 768px) {
+    .pin-input-container input {
+        width: 75px;
+        height: 90px;
+        font-size: 4rem;
+    }
+    .pin-input-container {
+        gap: "50px";
+    }
+}

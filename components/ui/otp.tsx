@@ -1,25 +1,19 @@
 "use client";
 import {
-    Anchor,
-    Button,
-    Checkbox,
-    Divider,
-    Group,
     Paper,
     PaperProps,
-    PasswordInput,
     Stack,
     Text,
-    TextInput,
     PinInput,
-    Image
+    
   } from '@mantine/core';
   import { useForm } from '@mantine/form';
-  import { upperFirst, useToggle } from '@mantine/hooks';
-  import { GoogleButton } from './GoogleButton';
+  import { useToggle } from '@mantine/hooks';
+  import { useMediaQuery } from '@mantine/hooks';
   
   function AuthenticationForm(props: PaperProps) {
     const [type, toggle] = useToggle(['login', 'register']);
+    const isMobile = useMediaQuery('(max-width: 768px)');
     const form = useForm({
       initialValues: {
         email: '',
@@ -32,63 +26,43 @@ import {
   
     return (
       <Paper bg="none" radius="md" p="xl"  {...props}>
-        <Text color='white' size="sm" fw={400} style={{textAlign:"center"}}>
+
+        <p className="text-xl md:text-sm text-white text-center">
         We just send you a verify code. <br/> Check your inbox to get them.
-        </Text>
-  
+          </p>
+
        
   
         <form onSubmit={form.onSubmit(() => {})}>
           <Stack>
             
 
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', background: "#111315", borderRadius:"0.5rem"}}>
+            <div style={{ position: 'relative', display: 'flex', justifyContent:"center"}}>
       
 
 
-            <PinInput size="lg" type="number" placeholder="0" styles={{input:{
+            <PinInput size="lg" type="number" placeholder="0" className="pin-input-container" gap={isMobile ? 30 : 12}  styles={{input:{
                 background: "#272B30",
                 border: "none",
                 color:"#fff",
                 fontSize: "2rem",
-                fontWeight: "500",
+                fontWeight: "600",
                 margin: "60% 0%",
-                padding: "55% 0%"
-
+                padding: "55% 0%",
+                
+                justifySelf:"center",
+                
             }}} />
 
 
-    </div>
+        </div>
 
-
-    {/* <Button 
-  type="submit" 
-  radius="xl" 
-  className='continueButton'
-  styles={{
-    root: {
-      background: 'linear-gradient(to right, #0A84FF, #5E5CE6)', 
-      color: '#fff', 
-      border: 'none',
-      transition: 'background 0.3s ease',
-      margin: "25% 0%",
-      
-      hover: {
-        background: 'linear-gradient(to right, #5E5CE6, #0A84FF)',
-      },
-    },
-  }}
->
-  Continue
-</Button> */}
-
-<button 
-              type="submit" 
-              className='buttonHovered text-white text-[14px] font-semibold bg-primaryGradient p-[10px_16px] rounded-full flex items-center gap-[8px] justify-center mt-12'
-              
-            >
-              Continue
-            </button>
+<button
+        type="submit"
+        className="continueButton sm:w-[full] mt-[25%] md:mt-[15%] bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-2 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
+      >
+        Continue
+      </button>
 
          
           </Stack>

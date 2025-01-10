@@ -14,8 +14,7 @@ import {
     Image
   } from '@mantine/core';
   import { useForm } from '@mantine/form';
-  import { upperFirst, useToggle } from '@mantine/hooks';
-  import { GoogleButton } from './GoogleButton';
+  import { useToggle } from '@mantine/hooks';
   
   function AuthenticationForm(props: PaperProps) {
     const [type, toggle] = useToggle(['login', 'register']);
@@ -31,89 +30,109 @@ import {
   
     return (
       <Paper bg="none" radius="md" p="xl"  {...props}>
-        <Text color='white' size="sm" fw={400} style={{marginBottom: "10%"}}>
-        Create a New Password
-        </Text>
+
+        <p className="text-xl md:text-sm mb-[8%] text-white">Create a New Password</p>
+
   
       
         <form onSubmit={form.onSubmit(() => {})}>
           <Stack>
             
 
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', background: "#111315", borderRadius:"0.5rem"}}>
-      <Image
-        src="/password.svg"
-        alt="email_Icon"
-        h={20}
-        w={20}
-        style={{ position: 'relative', left: 10 }}
-      />
-      <TextInput
-        required
-        placeholder="New Password"
-        value={form.values.password}
-        onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
-        error={form.errors.email && 'Invalid password'}
-        radius="md"
-        styles={{
-          input: {
-            backgroundColor: '#111315',
-            border: 'none',
-            color: '#fff',
-            marginLeft: "15px",
-            paddingLeft: '10px',
-          },
-        }}
-      />
-    </div>
+          <div
+          style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            background: '#111315',
+            borderRadius: '0.5rem',
+            width: '100%', // Ensure the parent div takes up full width
+          }}
+          className="p-2 text-[16px] md:p-0"
+        >
+          <Image
+            src="/password.svg"
+            alt="password Icon"
+            height={20}
+            width={20}
+            style={{ position: 'relative', left: 10 }}
+          />
+
+          <PasswordInput
+            required
+            placeholder="New Password"
+            value={form.values.password}
+            onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
+            error={form.errors.password && 'Password should include at least 6 characters'}
+            radius="md"
+            styles={{
+              root: {
+                width: '100%', // Make the PasswordInput root element take full width
+              },
+              input: {
+                backgroundColor: '#111315',
+                border: 'none',
+                color: '#fff',
+                paddingLeft: '10px',
+                marginLeft: '10px',
+                paddingRight: '15px',
+                width: '95%', // Ensure the input element takes full width inside its container
+              },
+            }}
+          />
+        </div>
 
 
-    <div style={{ position: 'relative', display: 'flex', alignItems: 'center', background: "#111315", borderRadius:"0.5rem"}}>
-      <Image
-        src="/password.svg"
-        alt="email_Icon"
-        h={20}
-        w={20}
-        style={{ position: 'relative', left: 10 }}
-      />
-      <TextInput
-        required
-        placeholder="Confirm Password"
-        error={form.errors.email && 'Invalid password'}
-        radius="md"
-        styles={{
-          input: {
-            backgroundColor: '#111315',
-            border: 'none',
-            color: '#fff',
-            marginLeft: "15px",
-            paddingLeft: '10px',
-          },
-        }}
-      />
-    </div>
+    <div
+          style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            background: '#111315',
+            borderRadius: '0.5rem',
+            width: '100%', // Ensure the parent div takes up full width
+          }}
+          className="p-2 text-[16px] md:p-0"
+        >
+          <Image
+            src="/password.svg"
+            alt="password Icon"
+            height={20}
+            width={20}
+            style={{ position: 'relative', left: 10 }}
+          />
+
+          <PasswordInput
+            required
+            placeholder="Confirm Password"
+            value={form.values.password}
+            onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
+            error={form.errors.password && 'Password should include at least 6 characters'}
+            radius="md"
+            styles={{
+              root: {
+                width: '100%', // Make the PasswordInput root element take full width
+              },
+              input: {
+                backgroundColor: '#111315',
+                border: 'none',
+                color: '#fff',
+                paddingLeft: '10px',
+                marginLeft: '10px',
+                paddingRight: '15px',
+                width: '95%', // Ensure the input element takes full width inside its container
+              },
+            }}
+          />
+        </div>
 
 
-    <Button 
-  type="submit" 
-  radius="xl" 
-  className='continueButton'
-  styles={{
-    root: {
-      background: 'linear-gradient(to right, #0A84FF, #5E5CE6)', 
-      color: '#fff', 
-      border: 'none',
-      transition: 'background 0.3s ease',
-      marginTop: "5%" ,
-      width: "100%",
-      hover: {
-        background: 'linear-gradient(to right, #5E5CE6, #0A84FF)',
-      },
-    },
-  }}
->
-  Continue
-</Button>
+    <button
+        type="submit"
+        className="continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
+      >
+        Continue
+      </button>
 
 
          

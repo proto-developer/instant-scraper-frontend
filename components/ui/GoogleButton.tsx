@@ -6,7 +6,7 @@ function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 262"
-      style={{ width: 20, height: 20 }}
+      className="w-7 h-7 md:w-5 md:h-5 lg:w-5 lg:h-5 mr-2" // Responsive width and height using Tailwind
       {...props}
     >
       <path
@@ -29,6 +29,14 @@ function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-export function GoogleButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {
-  return <Button leftSection={<GoogleIcon />} variant="default" {...props} />;
+export function GoogleButton(props: React.ComponentPropsWithoutRef<'button'>) { 
+  return (
+    <button
+      className="flex items-center h-12 md:h-9 justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 py-3 px-4 text-xl md:text-base bg-black text-white border border-opacity-1 rounded-xl md:rounded-md hover:bg-[#1C1C1E] transition-all"
+      {...props}
+    >
+      <GoogleIcon/>
+      Google
+    </button>
+  );
 }

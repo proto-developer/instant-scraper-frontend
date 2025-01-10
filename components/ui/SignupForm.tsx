@@ -31,69 +31,70 @@ import {
   
     return (
       <Paper bg="none" radius="md" p="xl"  {...props}>
-        <Text color='white' size="sm" fw={400}>
-          Sign in with Google
-        </Text>
+        <p className="text-xl md:text-sm text-white">Sign in with Google</p>
   
         <Group grow mb="md" mt="md">
-          <GoogleButton bg='black' radius="md"> <Text color='white' fw={500} >Google</Text> </GoogleButton>
+          <GoogleButton/> 
         </Group>
 
         <Divider color='grey' mt="lg" mb="lg"/>
 
-        <Text color='white' size="sm" fw={400} mb="lg" mt="lg"  >Or continue with email address</Text>
-        {/* <Divider label="Or continue with email" labelPosition="center" my="lg" /> */}
+        <p className="text-xl md:text-sm text-white mb-4">Or continue with email address</p>
+
   
         <form onSubmit={form.onSubmit(() => {})}>
           <Stack>
             
 
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', background: "#111315", borderRadius:"0.5rem"}}>
-      <Image
-        src="/email.svg"
-        alt="email_Icon"
-        h={20}
-        w={20}
-        style={{ position: 'relative', left: 10 }}
-      />
-      <TextInput
-        required
-        placeholder="Your Email"
-        value={form.values.email}
-        onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
-        error={form.errors.email && 'Invalid email'}
-        radius="md"
-        styles={{
-          input: {
-            backgroundColor: '#111315',
-            border: 'none',
-            color: '#fff',
-            marginLeft: "15px",
-            paddingLeft: '10px',
-          },
-        }}
-      />
-    </div>
+          <div
+          style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
+            background: '#111315',
+            borderRadius: '0.5rem',
+            width: '100%', // Ensure the parent div takes up full width
+          }}
+          className="p-2 text-[16px] md:p-0"
+        >
+          <Image
+            src="/email.svg"
+            alt="email Icon"
+            height={20}
+            width={20}
+            style={{ position: 'relative', left: 10 }}
+          />
+          
+          <TextInput
+            required
+            placeholder="Your Email"
+            value={form.values.email}
+            onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
+            error={form.errors.email && 'Invalid email'}
+            radius="md"
+            styles={{
+              root: {
+                width: '100%', // Make the TextInput root element take full width
+              },
+              input: {
+                backgroundColor: '#111315',
+                border: 'none',
+                color: '#fff',
+                marginLeft: '15px',
+                paddingLeft: '10px',
+                width: '90%', // Ensure the input element takes full width inside its container
+              },
+            }}
+          />
+        </div>
 
 
-    <Button 
-  type="submit" 
-  radius="xl" 
-  className='continueButton'
-  styles={{
-    root: {
-      background: 'linear-gradient(to right, #0A84FF, #5E5CE6)', 
-      color: '#fff', 
-      border: 'none',
-      transition: 'background 0.3s ease',
-      hover: {
-        background: 'linear-gradient(to right, #5E5CE6, #0A84FF)',
-      },
-    },
-  }}
->
-  Continue
-</Button>
+    <button
+        type="submit"
+        className="continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
+      >
+        Continue
+      </button>
 
 
          

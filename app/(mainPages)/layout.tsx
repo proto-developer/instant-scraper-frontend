@@ -46,7 +46,7 @@ export default function RootLayout({
         <div
           className={`${
             isSidebarOpen ? "block" : "hidden"
-          } fixed inset-0 bg-black bg-opacity-75 z-50 sm:block sm:static mt-[15%] md:mt-0`}
+          } fixed inset-0  bg-black bg-opacity-75 z-50 sm:block sm:static  md:mt-0`}
         >
           <Sidebar.Root>
             {/* Logo visible in the sidebar on medium and larger screens */}

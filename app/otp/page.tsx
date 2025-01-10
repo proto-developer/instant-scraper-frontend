@@ -8,8 +8,8 @@ const OTPPage = () => {
   return (
     <div className="flex h-screen">
       {/* Left Box */}
-      <div className="leftBox p-[32px_16px] h-full flex flex-col items-center justify-center gap-[62px] flex-1">
-        <Image src="/logo.svg" alt="logo" width={170} height={40} />
+      <div className="leftBox p-[32px_16px] h-full flex flex-col items-center justify-center gap-[34px] flex-1">
+                    <Image src="/logo.svg" alt="logo" width={170} height={40} className="w-[250px] md:w-[170px] lg:w-[170px]"/>
         <OTP />
       </div>
 

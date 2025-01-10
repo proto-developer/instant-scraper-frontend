@@ -17,13 +17,18 @@ export default function RootLayout({
             <ProcessingLogos.ScrappingData data="tick"/>
             <ProcessingLogos.Analyzing data="caution"/>
             <ProcessingLogos.GeneratingOutput data="processing"/>
+
+            <p className="text-[18px] md:text-[16px] my-3">Your Data is ready to download</p>
+
+            <ProcessingLogos.downloadDataButton/>
+
             </div>
             
             
 
         </div>
 
-        <div className="input w-[90%] md:w-[75%] h-[72%] flex flex-col align-bottom justify-end justify-self-center text-center">
+        <div className="input w-[90%] md:w-[75%] h-[63%] md:h-[60%] flex flex-col align-bottom justify-end justify-self-center text-center">
         <InstructionInput/>    
         <ScrapperComponent.FooterNote />
         </div>

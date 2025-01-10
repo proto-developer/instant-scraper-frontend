@@ -19,7 +19,7 @@ const RecentRequestsContainer = ({
   return (
     <div
       id="recentRequestsContainer"
-      className="flex flex-col gap-[18px] flex-1 max-h-[calc(110dvh-490px)]"
+      className="flex flex-col gap-[18px] mt-[26%] md:mt-0 flex-1 max-h-[calc(110dvh-490px)]"
     >
       <h2 className="text-[21px] md:text-[18px] ml-4">Recent Requests</h2>
       <div className="flex flex-col gap-[6px] overflow-auto requestsScollableDiv">

@@ -18,7 +18,7 @@ const ScraperSearch = ({ children }: { children: React.ReactNode }) => {
 
 const FooterNote = () => {
   return (
-    <p className="text-[12px] text-[#B4B4B4]">
+    <p className="text-[14px] md:text-[12px] text-[#B4B4B4]">
       Data security comes first &ndash; We'll never sell or share your data. For
       more details, here's our&nbsp;
       <Link href="/privacy-policy" className="text-[#8793FF] hover:underline">
