@@ -12,7 +12,7 @@ const startButton = () => {
     return (
         <button 
               type="submit" 
-              className='buttonHovered text-[18px] md:text-[15px] font-semibold bg-primaryGradient p-[12px_16px] rounded-full flex items-center gap-[2px] justify-center mt-10'
+              className='buttonHovered text-[18px] md:text-[15px] 2xl:text-[20px] font-semibold bg-primaryGradient p-[12px_16px] 2xl:p-[24px_30px] rounded-full flex items-center gap-[2px] justify-center mt-5 md:mt-10'
               onClick={handleClickStartScrapping}
             >
               Start Scrapping

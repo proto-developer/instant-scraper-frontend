@@ -7,7 +7,7 @@ function Analyzing (props: {data: string}) {
 
     return (
         <>
-        <p className="flex items-center text-[18px] md:text-[16px] text-[#717171]">
+        <p className="flex items-center text-[16px] text-[#717171]">
                     <Image
                     className="mr-3"
                     alt={`${icon_name}_icon`}
@@ -27,7 +27,7 @@ function ScrappingData(props: { data: string }) {
 
     return (
         <>
-            <p className="flex items-center text-[18px] md:text-[16px] text-[#717171]">
+            <p className="flex items-center text-[16px] text-[#717171]">
                 <Image
                     className="mr-3"
                     alt={`${icon_name}_icon`}
@@ -47,7 +47,7 @@ function GeneratingOutput (props : {data: string}) {
 
     return (
         <>
-        <p className="flex items-center text-[18px] md:text-[16px] text-[#717171]">
+        <p className="flex items-center text-[16px] text-[#717171]">
                 <Image
                 className="mr-3"
                 alt={`${icon_name}_icon`}
@@ -65,7 +65,7 @@ function downloadDataButton () {
     
     return (
         <>
-        <button className="py-2 px-3 md:py-1.5 md:px-2.5 text-[17px] md:text-[13px] bg-[#5E5CE6] rounded-md">
+        <button className="py-2 px-3 md:py-1.5 md:px-2.5 text-[15px] md:text-[13px] bg-[#5E5CE6] rounded-md">
             Download Data
         </button>
         </>

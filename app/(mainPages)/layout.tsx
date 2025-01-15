@@ -4,6 +4,8 @@ import { useState } from "react";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
+import ProfileMenu from "@/components/ui/ProfileMenu"; 
+
 
 const RecenetRequestsData = [
   {
@@ -41,7 +43,7 @@ export default function RootLayout({
 
   return (
     <>
-      <div className="relative h-full flex items-center bg-[#1C1C1E] md:bg-black text-white">
+      <div className="h-full flex items-center bg-[#1C1C1E] md:bg-black text-white">
         {/* Sidebar */}
         <div
           className={`${
@@ -90,16 +92,21 @@ export default function RootLayout({
         </button>
 
         {/* Main Content Area */}
-        <div className="mx-[10px] my-[0px] bg-darkLight border border-none md:border-grayBorder rounded-[16px] flex-1 min-h-screen max-h-fit md:h-[calc(105dvh-20px)] ">
+        <div className="mx-[10px] my-[0px] bg-darkLight border border-none md:border-grayBorder rounded-[16px] overflow-x-hidden overflow-y-auto flex-1 h-[calc(100dvh-20px)]">
           {/* Logo displayed when sidebar is closed on mobile */}
           {!isSidebarOpen && (
             <div className="flex justify-center mt-7 mb-0 sm:hidden">
               <Link href={"/"}>
-                <Image src="/logo.svg" alt="logo" width={220} height={40} />
+                <Image src="/logo.svg" alt="logo" width={180} height={40} />
               </Link>
             </div>
           )}
           {children}
+
+          <div className="absolute top-9 right-3 md:top-6 md:right-8">
+            <ProfileMenu />
+          </div>
+
         </div>
       </div>
     </>

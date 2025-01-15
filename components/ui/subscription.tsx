@@ -15,7 +15,7 @@ const Subscription = () => {
 
   return (
     <>
-      <div className="w-full overflow-x-hidden overflow-y-auto min-h-screen  md:h-full flex flex-col">
+      <div className="w-full min-h-screen  md:h-full flex flex-col">
         
           <div className="w-[100%] m-[6%] md:m-[3%]">
             <Image
@@ -32,8 +32,8 @@ const Subscription = () => {
     <button className={`mr-2 w-[48%] text-[19px] md:text-[16px] p-[2%] md:p-[1.5%_10%] rounded-full ${isMonthly ? 'bg-white text-black' : 'bg-none text-white'}`} onClick={(e) => {e.preventDefault(); setSelectedOption("Monthly"); setIsMonthly(true); setIsYearly(false);}}>
         Monthly
     </button>
-    <button className={`w-[48%] p-[2%] text-[19px] md:font-normal md:text-[16px] md:p-[1.5%_6%] rounded-full ${isYearly ? 'bg-white text-black' : 'bg-none text-white'}`}  onClick={(e) => {e.preventDefault(); setSelectedOption("Yearly"); setIsYearly(true); setIsMonthly(false); }}>
-        Yearly -20% off
+    <button className={`w-[49%] 2xl:w-[50%] p-[2%] text-[19px] md:font-normal md:text-[16px] md:p-[1.5%_6%] rounded-full ${isYearly ? 'bg-white text-black' : 'bg-none text-white'}`}  onClick={(e) => {e.preventDefault(); setSelectedOption("Yearly"); setIsYearly(true); setIsMonthly(false); }}>
+        Yearly <span className="text-[16px]"> -20% off </span>
     </button>
 </div>
 

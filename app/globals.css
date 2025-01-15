@@ -1,6 +1,19 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow: -moz-scrollbars-none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 #recentRequestsContainer .requestsScollableDiv::-webkit-scrollbar {
     width: 2px !important;
     border-radius: 100% !important;
@@ -51,6 +64,30 @@
     color: #ffffff;
 }
 
+.gradient-background {
+    background: linear-gradient(to right, #4e9af1, #9b6fe6, #f06a8b);
+    /* Gradient background */
+    padding: 5px 10px;
+    /* Adds some padding around the text */
+    color: white;
+    /* White text color */
+    border-radius: 5px;
+    /* Optional: Adds rounded corners */
+}
+
+.gradient-background-box {
+    display: inline-block;
+    /* Ensures the background only wraps around the text */
+    background: linear-gradient(to right, #0A84FF80, transparent);
+    /* Blue to transparent gradient */
+    color: white;
+    /* White text color */
+    padding: 6px 20px 6px 5px;
+    border-left: #0A84FF 3px solid;
+    /* Adds padding to the text inside the box */
+    /* Optional: Adds rounded corners to the box */
+}
+
 
 /* Apply styles to button inside .subscriptionPackages on hover */
 
@@ -73,7 +110,16 @@
     .subscriptionPackages {
         border: 1px solid white;
         background-color: #000;
-        margin: 8px 0px;
+        margin: 4px 0px;
         border-radius: 30px;
+    }
+    .gradient-background-box {
+        padding: 6px 50px 6px 50px;
+    }
+}
+
+@media (min-width: 1900px) {
+    .gradient-background-box {
+        padding: 30px 30px 30px 7px;
     }
 }
