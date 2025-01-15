@@ -12,7 +12,7 @@ const AccountSettingSidebar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <div className="w-full h-[full] flex flex-col md:flex-row text-white">
+    <div className="w-full h-full flex flex-col md:flex-row text-white">
       {/* Sidebar */}
       <div className="w-full md:w-[35%]  md:h-full md:mr-0">
         {/* My Account Section */}

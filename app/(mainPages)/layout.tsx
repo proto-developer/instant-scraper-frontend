@@ -90,7 +90,7 @@ export default function RootLayout({
         </button>
 
         {/* Main Content Area */}
-        <div className="m-[10px]  bg-darkLight border border-none md:border-grayBorder rounded-[16px] flex-1 min-h-screen max-h-fit md:h-[calc(100dvh-20px)] ">
+        <div className="mx-[10px] my-[0px] bg-darkLight border border-none md:border-grayBorder rounded-[16px] flex-1 min-h-screen max-h-fit md:h-[calc(105dvh-20px)] ">
           {/* Logo displayed when sidebar is closed on mobile */}
           {!isSidebarOpen && (
             <div className="flex justify-center mt-7 mb-0 sm:hidden">
