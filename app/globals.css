@@ -6,12 +6,6 @@ body {
     height: 100%;
     margin: 0;
     overflow: hidden;
-    overflow: -moz-scrollbars-none;
-}
-
-body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
 }
 
 #recentRequestsContainer .requestsScollableDiv::-webkit-scrollbar {

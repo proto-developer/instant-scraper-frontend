@@ -124,7 +124,7 @@ const toggleDetails = (plan: Plan) => {
 
   {/* Button */}
   <button
-    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
+    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[8_0] md:p-[4_0] md:block ${
         isDetailsVisible.basic ? 'block' : 'hidden'
     }`}
   >
@@ -214,7 +214,7 @@ const toggleDetails = (plan: Plan) => {
 
   {/* Button */}
   <button
-    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
+    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[8_0] md:p-[4_0] md:block ${
       isDetailsVisible.standard ? 'block' : 'hidden'
     }`}
   >
@@ -304,7 +304,7 @@ const toggleDetails = (plan: Plan) => {
 
   {/* Button */}
   <button
-    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
+    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[8_0] md:p-[4_0] md:block ${
       isDetailsVisible.premium ? 'block' : 'hidden'
     }`}
   >
@@ -392,7 +392,7 @@ const toggleDetails = (plan: Plan) => {
 
   {/* Button */}
   <button
-    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
+    className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[8_0] md:p-[4_0] md:block ${
       isDetailsVisible.enterprise ? 'block' : 'hidden'
     }`}
   >
