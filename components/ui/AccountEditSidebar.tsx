@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import ProfileInformation from "./profileInformation";
-import PasswordChange from "./passwordChange";
-import NotificationSetting from "./notificationsSetting";
+import ProfileInformation from "./ProfileInformation";
+import PasswordChange from "./PasswordChange";
+import NotificationSetting from "./NotificationsSetting";
 import { useState } from "react";
 
 const AccountSettingSidebar = () => {
