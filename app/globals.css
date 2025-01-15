@@ -73,4 +73,15 @@
         height: 90px;
         font-size: 4rem;
     }
+    .subscriptionPackages:hover {
+        border: #D3D3D3 6px solid;
+        border-radius: 30px;
+        transform: none;
+    }
+    .subscriptionPackages {
+        border: 1px solid white;
+        background-color: #000;
+        margin: 8px 0px;
+        border-radius: 30px;
+    }
 }

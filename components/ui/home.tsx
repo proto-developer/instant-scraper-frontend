@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="w-full h-[90%] md:h-full flex flex-col justify-between px-4 sm:px-8">
+            <div className="w-full  h-[calc(100dvh-130px)] md:h-full flex flex-col justify-between px-4 sm:px-8">
                 {/* Main Content */}
                 <div className="text-center flex-grow flex flex-col justify-center">
                     <h1 className="text-[44px] md:text-3xl font-semibold flex items-center justify-center flex-col sm:flex-row">
