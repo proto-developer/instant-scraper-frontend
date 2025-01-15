@@ -6,7 +6,7 @@ import StartNewScrapBtn from "../ui/StartNewScrapBtn";
 
 const Root = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="w-[315px] border-r bg-darkLight border-grayBorder p-[32px_16px] h-screen flex flex-col items-center justify-between gap-[62px]">
+    <div className="w-[315px] border-r bg-darkLight border-grayBorder p-[32px_16px] h-full  flex flex-col items-center justify-between gap-[62px]">
       {children}
     </div>
   );
@@ -47,7 +47,7 @@ const RecentRequestCard: React.FC<RecentRequestProps> = ({
 
 const SidebarFooter = () => {
   return (
-    <div className="flex flex-col py-[55px] md:py-[20px] gap-[14px] md:gap-[4px] w-full border-t border-grayBorder">
+    <div className="flex flex-col py-[40px] md:py-[20px] gap-[14px] overflow-auto md:gap-[4px] w-full border-t border-grayBorder">
       <div className="flex items-center justify-between gap-[1px] p-[12px_16px]">
         <div className="flex items-center gap-[12px]">
           <Image src="/credits.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5"/>
