@@ -29,7 +29,7 @@ const toggleDetails = (plan: Plan) => {
 
     return(
 
-    <div className="cards  w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
+    <div className="cards  w-[90%] md:w-[95%] lg:w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
 
 <div className="card subscriptionPackages w-full md:w-[25%] h-auto md:h-auto flex flex-col rounded-2xl group">
   {/* Main Content */}

@@ -19,7 +19,7 @@ export default {
         primaryGradient: "linear-gradient(to right, #0A84FF, #5E5CE6)",
       },
       screens: {
-        sm: "770px",  // Set the "sm" breakpoint to start from 770px
+        sm: "830px",  // Set the "sm" breakpoint to start from 770px
       },
     },
   },

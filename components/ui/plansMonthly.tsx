@@ -29,7 +29,7 @@ const toggleDetails = (plan: Plan) => {
 
     return(
 
-    <div className="cards  w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
+    <div className="cards  w-[90%] md:w-[95%] lg:w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
 
 <div className="card subscriptionPackages w-full md:w-[25%] h-auto md:h-auto flex flex-col rounded-2xl group">
   {/* Main Content */}
@@ -316,7 +316,7 @@ const toggleDetails = (plan: Plan) => {
 <div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
-    <h3 className="md:font-semibold">Enterprise Plan</h3>
+    <h3 className="md:font-semibold ">Enterprise Plan</h3>
     <div className="price flex flex-row">
       <h1 className="text-[40px] md:text-[35px] font-bold">Custom</h1>
       

@@ -11,7 +11,7 @@ export default function ProfileMenu() {
   };
 
   return (
-    <div className="relative">
+    <div>
       {/* Profile Photo */}
       <button
         className="w-12 md:w-14 h-12 md:h-14 rounded-full bg-gray-300 overflow-hidden border-2 border-white shadow-md"

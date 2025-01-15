@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="w-full h-[100dvh] flex flex-col px-4 sm:px-8 justify-evenly">
+            <div className="w-full h-[100dvh] flex flex-col px-4 sm:px-8 justify-between">
                 {/* Main Content */}
                 <div className="text-center h-auto md:h-[100%] flex flex-col   md:justify-center">
                
