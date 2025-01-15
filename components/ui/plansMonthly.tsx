@@ -1,20 +1,31 @@
+"use client"
+
 import { useState } from 'react';
 
 const PlansMonthly = () => {
-    
-    const [isDetailsVisible, setIsDetailsVisible] = useState({
-        basic: false,
-        standard: false,
-        premium: false,
-        enterprise: false,
-      });
-    
-      const toggleDetails = (plan : (string)) => {
-        setIsDetailsVisible((prevState) => ({
-          ...prevState,
-          [plan]: !prevState[plan],
-        }));
-      };
+
+  type Plan = 'basic' | 'standard' | 'premium' | 'enterprise';
+
+  interface PlanDetails {
+    basic: boolean;
+    standard: boolean;
+    premium: boolean;
+    enterprise: boolean;
+  }
+
+    const [isDetailsVisible, setIsDetailsVisible] = useState<PlanDetails>({
+  basic: false,
+  standard: false,
+  premium: false,
+  enterprise: false,
+});
+
+const toggleDetails = (plan: Plan) => {
+  setIsDetailsVisible((prevState) => ({
+    ...prevState,
+    [plan]: !prevState[plan], // Now TypeScript knows `plan` is one of the keys of `PlanDetails`
+  }));
+};
 
     return(
 
@@ -56,7 +67,7 @@ const PlansMonthly = () => {
   {/* Details Section */}
   <div
     className={`details md:text-[12px] flex-col ml-7 mb-5 md:mb-0 md:ml-5 md:mt-2 md:block ${
-        isDetailsVisible.basic || window.innerWidth >= 768 ? 'flex' : 'hidden'
+        isDetailsVisible.basic ? 'flex' : 'hidden'
     }`}
   >
     <ul className="max-w-md space-y-1 list-inside ">
@@ -114,7 +125,7 @@ const PlansMonthly = () => {
   {/* Button */}
   <button
     className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
-        isDetailsVisible.basic || window.innerWidth >= 768 ? 'block' : 'hidden'
+        isDetailsVisible.basic ? 'block' : 'hidden'
     }`}
   >
     Current Plan
@@ -158,7 +169,7 @@ const PlansMonthly = () => {
   {/* Details Section */}
   <div
     className={`details md:text-[12px] flex-col ml-7 mb-5 md:mb-0 md:ml-5 md:mt-2 md:block ${
-      isDetailsVisible.standard || window.innerWidth >= 768 ? 'flex' : 'hidden'
+      isDetailsVisible.standard ? 'flex' : 'hidden'
     }`}
   >
     <ul className="max-w-md space-y-1 list-inside ">
@@ -204,7 +215,7 @@ const PlansMonthly = () => {
   {/* Button */}
   <button
     className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
-      isDetailsVisible.standard || window.innerWidth >= 768 ? 'block' : 'hidden'
+      isDetailsVisible.standard ? 'block' : 'hidden'
     }`}
   >
     Choose Plan
@@ -248,7 +259,7 @@ const PlansMonthly = () => {
   {/* Details Section */}
   <div
     className={`details md:text-[12px] flex-col ml-7 mb-5 md:mb-0 md:ml-5 md:mt-2 md:block ${
-      isDetailsVisible.premium || window.innerWidth >= 768 ? 'flex' : 'hidden'
+      isDetailsVisible.premium ? 'flex' : 'hidden'
     }`}
   >
     <ul className="max-w-md space-y-1 list-inside ">
@@ -294,7 +305,7 @@ const PlansMonthly = () => {
   {/* Button */}
   <button
     className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
-      isDetailsVisible.premium || window.innerWidth >= 768 ? 'block' : 'hidden'
+      isDetailsVisible.premium ? 'block' : 'hidden'
     }`}
   >
     Choose Plan
@@ -336,7 +347,7 @@ const PlansMonthly = () => {
   {/* Details Section */}
   <div
     className={`details md:text-[12px] flex-col ml-7 mb-5 md:mb-0 md:ml-5 md:mt-2 md:block ${
-      isDetailsVisible.enterprise || window.innerWidth >= 768 ? 'flex' : 'hidden'
+      isDetailsVisible.enterprise ? 'flex' : 'hidden'
     }`}
   >
     <ul className="max-w-md space-y-1 list-inside ">
@@ -382,7 +393,7 @@ const PlansMonthly = () => {
   {/* Button */}
   <button
     className={`bg-[#4E4E4E33] text-md h-fit rounded-lg mr-auto ml-auto mt-auto mb-5 w-[70%] md:w-[80%] p-[4_0] md:p-[3_0] md:block ${
-      isDetailsVisible.enterprise || window.innerWidth >= 768 ? 'block' : 'hidden'
+      isDetailsVisible.enterprise ? 'block' : 'hidden'
     }`}
   >
     Contact Support
