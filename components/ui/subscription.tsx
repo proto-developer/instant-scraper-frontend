@@ -28,7 +28,7 @@ const Subscription = () => {
             <h4 className="text-[24px] md:text-xl ml-3 md:ml-0 mb-2 md:mt-1"> Subscription </h4>
           </div>
 
-          <div className="roundButton w-[85%] md:w-[65%] xl:w-[35%] flex flex-row flex-wrap ml-auto mr-auto p-[0.25%_0.25%] bg-[#2F3133] rounded-s-full rounded-e-full">
+          <div className="roundButton w-[95%] sm:w-[95%] md:w-[65%] xl:w-[35%] flex flex-row flex-wrap ml-auto mr-auto p-[0.25%_0.25%] bg-[#2F3133] rounded-s-full rounded-e-full">
     <button className={`mr-2 w-[48%] text-[19px] md:text-[16px] p-[2%] md:p-[1.5%_10%] rounded-full ${isMonthly ? 'bg-white text-black' : 'bg-none text-white'}`} onClick={(e) => {e.preventDefault(); setSelectedOption("Monthly"); setIsMonthly(true); setIsYearly(false);}}>
         Monthly
     </button>

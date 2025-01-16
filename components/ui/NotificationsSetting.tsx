@@ -9,10 +9,10 @@ const ProfileInformation = () => {
 
   return (
     <div className="mt-[10.5%]">
-      <h4 className="text-[22px] md:text-xl font-semibold mt-[2] mb-[5%]">Notifications</h4>
+      <h4 className="text-[20px] md:text-xl font-semibold mt-[2] mb-[5%]">Notifications</h4>
 
       <div className="flex justify-between mt-10 mb-5">
-        <h4 className="text-[18px] md:text-sm">Product updates and community announcements</h4>
+        <h4 className="text-[16px] md:text-sm">Product updates and community announcements</h4>
         <Switch
           checked={isCheckedFirst}
           onChange={(event) => setIsCheckedFirst(event.currentTarget.checked)}
@@ -33,7 +33,7 @@ const ProfileInformation = () => {
       <Divider color="#272B30" />
 
       <div className="flex flex-row justify-between mt-8 mb-5">
-        <h4 className="text-[18px] md:text-sm">Marketing newsletter</h4>
+        <h4 className="text-[16px] md:text-sm">Marketing newsletter</h4>
         <Switch
           checked={isCheckedSecond}
           onChange={(event) => setIsCheckedSecond(event.currentTarget.checked)}

@@ -118,7 +118,7 @@ export default function RootLayout({
         </div>
 
         {/* Main Content Area */}
-        <div className="mx-[10px] md:mx-0 lg:mx-[10px] my-[0px] bg-darkLight border border-none md:border-grayBorder rounded-[16px] overflow-x-clip overflow-y-auto flex-1 h-[calc(100dvh-20px)] md:h-[calc(100dvh)] lg:h-[calc(100dvh-20px)] pt-16 sm:pt-0">
+        <div className="mx-[10px] md:mx-1 lg:mx-[10px] my-[0px] bg-darkLight border border-none md:border-grayBorder rounded-[16px] overflow-x-clip overflow-y-auto flex-1 h-[calc(100dvh-20px)] md:h-[calc(100dvh-10px)] lg:h-[calc(100dvh-20px)] pt-16 sm:pt-0">
           {children}
 
           {/* Profile Menu when sidebar is closed */}
@@ -127,7 +127,7 @@ export default function RootLayout({
               <ProfileMenu />
             </div>
           )}
-        </div>
+        </div>  
       </div>
     </>
   );

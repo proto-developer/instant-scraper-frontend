@@ -1,11 +1,10 @@
 "use client"
-
 import { useState } from 'react';
 
 const PlansYearly = () => {
-    
+
   type Plan = 'basic' | 'standard' | 'premium' | 'enterprise';
-  const isBrowser = typeof window !== 'undefined';
+
   interface PlanDetails {
     basic: boolean;
     standard: boolean;
@@ -31,7 +30,7 @@ const toggleDetails = (plan: Plan) => {
 
     <div className="cards  w-[90%] md:w-[95%] lg:w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
 
-<div className="card subscriptionPackages w-full md:w-[25%] h-auto md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-full md:w-[25%] h-auto md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default"  onClick={() => toggleDetails("basic")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Basic Plan</h3>
@@ -44,8 +43,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("basic")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] cursor-pointer md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -67,8 +66,7 @@ const toggleDetails = (plan: Plan) => {
   {/* Details Section */}
   <div
     className={`details md:text-[12px] flex-col ml-7 mb-5 md:mb-0 md:ml-5 md:mt-2 md:block ${
-      isDetailsVisible.basic ? 'flex' : 'hidden'
-
+        isDetailsVisible.basic ? 'flex' : 'hidden'
     }`}
   >
     <ul className="max-w-md space-y-1 list-inside ">
@@ -134,21 +132,21 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-    <div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+    <div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default" onClick={() => toggleDetails("standard")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Standard Plan</h3>
     <div className="price flex flex-row">
       <h1 className="text-[40px] md:text-[35px] font-bold">$20</h1>
       <p className="text-[12px] md:text-[10px] text-[#868C92] ml-2 mt-3.5 leading-normal">
-        Per month <br /> billed monthly
+        Per month <br /> billed anually
       </p>
     </div>
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("standard")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -224,21 +222,21 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default" onClick={() => toggleDetails("premium")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Pro Plan</h3>
     <div className="price flex flex-row">
       <h1 className="text-[40px] md:text-[35px] font-bold">$50</h1>
       <p className="text-[12px] md:text-[10px] text-[#868C92] ml-2 mt-3.5 leading-normal">
-        Per month <br /> billed monthly
+        Per month <br /> billed anually
       </p>
     </div>
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("premium")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] cursor-pointer md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -314,10 +312,10 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto cursor-pointer md:cursor-default flex flex-col rounded-2xl group"  onClick={() => toggleDetails("enterprise")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
-    <h3 className="md:font-semibold">Enterprise Plan</h3>
+    <h3 className="md:font-semibold ">Enterprise Plan</h3>
     <div className="price flex flex-row">
       <h1 className="text-[40px] md:text-[35px] font-bold">Custom</h1>
       
@@ -325,8 +323,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("enterprise")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%]  md:hidden"
+     
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${

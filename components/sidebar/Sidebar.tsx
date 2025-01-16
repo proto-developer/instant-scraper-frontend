@@ -19,9 +19,9 @@ const RecentRequestsContainer = ({
   return (
     <div
       id="recentRequestsContainer"
-      className="flex flex-col gap-[18px] mt-[26%] md:mt-0 flex-1 max-h-[calc(100dvh-270px)]"
+      className="flex flex-col gap-[18px] sm:mt-0 mt-14 md:mt-0 flex-1 max-h-[calc(100dvh-280px)]"
     >
-      <h2 className="text-[21px] md:text-[18px] ml-4">Recent Requests</h2>
+      <h2 className="text-[18px] ml-4">Recent Requests</h2>
       <div className="flex flex-col gap-[6px] overflow-auto requestsScollableDiv">
         {children}
       </div>
@@ -40,20 +40,20 @@ const RecentRequestCard: React.FC<RecentRequestProps> = ({
       className="flex items-center gap-[12px] hover:bg-gray-700 p-[12px_16px] rounded-full"
     >
       <Image src="/recentChat.svg" alt="logo" width={20} height={20} />
-      <p className="text-[19px] md:text-[16px] text-white line-clamp-1">{requestTitle}</p>
+      <p className="text-[16px] text-white line-clamp-1">{requestTitle}</p>
     </Link>
   );
 };
 
 const SidebarFooter = () => {
   return (
-    <div className="flex flex-col py-[40px] md:py-[20px] gap-[14px]  md:gap-[4px] w-full border-t border-grayBorder">
+    <div className="flex flex-col py-[40px] md:py-[20px] pb-0 md:pb-0  w-full border-t border-grayBorder">
       <div className="flex items-center justify-between gap-[1px] p-[12px_16px]">
         <div className="flex items-center gap-[12px]">
           <Image src="/credits.png" alt="logo" width={20} height={20} className="sm:w-6 md:w-5 lg:w-5"/>
-          <p className="text-[21px] md:text-[14px]  text-white">Credits</p>
+          <p className="text-[17px] md:text-[14px]  text-white">Credits</p>
         </div>
-        <p className="text-[21px] md:text-[14px] text-white">10/10</p>
+        <p className="text-[17px] md:text-[14px] text-white">10/10</p>
       </div>
       
     </div>

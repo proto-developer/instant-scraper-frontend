@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from 'react';
 
 const PlansMonthly = () => {
@@ -29,9 +28,10 @@ const toggleDetails = (plan: Plan) => {
 
     return(
 
-    <div className="cards  w-[90%] md:w-[95%] lg:w-[90%] flex flex-col md:flex-row ml-auto mr-auto mt-[3%] min-h-[65%] md:bg-[#0D0C0C] rounded-lg">
+    <div className="cards  w-[95%] grid gap-1 md:gap-5 
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ml-auto mr-auto mt-[3%] min-h-[72%] md:bg-[#0D0C0C] rounded-lg">
 
-<div className="card subscriptionPackages w-full md:w-[25%] h-auto md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-full  h-auto md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default"  onClick={() => toggleDetails("basic")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Basic Plan</h3>
@@ -44,8 +44,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("basic")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] cursor-pointer md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -133,7 +133,7 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-    <div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+    <div className="card subscriptionPackages w-[full]  h-[full] md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default" onClick={() => toggleDetails("standard")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Standard Plan</h3>
@@ -146,8 +146,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("standard")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -223,7 +223,7 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-[full]  h-[full] md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default" onClick={() => toggleDetails("premium")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Pro Plan</h3>
@@ -236,8 +236,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("premium")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%] cursor-pointer md:hidden"
+      
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${
@@ -313,7 +313,7 @@ const toggleDetails = (plan: Plan) => {
 </div>
 
 
-<div className="card subscriptionPackages w-[full] md:w-[25%] h-[full] md:h-auto flex flex-col rounded-2xl group">
+<div className="card subscriptionPackages w-[full]  h-[full] md:h-auto cursor-pointer md:cursor-default flex flex-col rounded-2xl group"  onClick={() => toggleDetails("enterprise")}>
   {/* Main Content */}
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold ">Enterprise Plan</h3>
@@ -324,8 +324,8 @@ const toggleDetails = (plan: Plan) => {
 
     {/* Dropdown Arrow for Small Screens */}
     <div
-      className="dropdown absolute right-5 top-[60%] translate-y-[-50%] cursor-pointer md:hidden"
-      onClick={() => toggleDetails("enterprise")}
+      className="dropdown absolute right-5 top-[50%] translate-y-[-50%]  md:hidden"
+     
     >
       <svg
         className={`w-7 h-7 text-[#fff] transform transition-transform duration-300 ${

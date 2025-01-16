@@ -18,9 +18,7 @@ export default {
       backgroundImage: {
         primaryGradient: "linear-gradient(to right, #0A84FF, #5E5CE6)",
       },
-      screens: {
-        sm: "830px",  // Set the "sm" breakpoint to start from 770px
-      },
+      
     },
   },
   plugins: [],

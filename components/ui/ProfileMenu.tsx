@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LogoutButton from "@/components/ui/LogoutButton";
 
 export default function ProfileMenu() {
   const [menuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!menuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener for clicks
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Cleanup the event listener on unmount
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div>
+    <div ref={menuRef}>
       {/* Profile Photo */}
       <button
-        className="w-12 md:w-14 h-12 md:h-14 rounded-full bg-gray-300 overflow-hidden border-2 border-white shadow-md"
+        className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-gray-300 overflow-hidden border-2 border-white shadow-md"
         onClick={toggleMenu}
       >
         <img
