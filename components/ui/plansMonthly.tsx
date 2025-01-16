@@ -29,7 +29,7 @@ const toggleDetails = (plan: Plan) => {
     return(
 
     <div className="cards  w-[95%] grid gap-1 md:gap-5 
-  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ml-auto mr-auto mt-[3%] min-h-[72%] md:bg-[#0D0C0C] rounded-lg">
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ml-auto mr-auto mt-[3%] min-h-[75%] lg:min-h-[75%] xl:min-h-[60%]  md:bg-[#0D0C0C] rounded-lg">
 
 <div className="card subscriptionPackages w-full  h-auto md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default"  onClick={() => toggleDetails("basic")}>
   {/* Main Content */}
