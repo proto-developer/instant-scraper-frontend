@@ -15,7 +15,7 @@ const Subscription = () => {
 
   return (
     <>
-      <div className="w-[100%] min-h-screen overflow-x-hidden overflow-y-auto md:h-full flex flex-col">
+      <div className="w-[100%] min-h-screen overflow-x-hidden  md:h-full flex flex-col">
         
           <div className="w-[100%] m-[6%] md:m-[3%]">
             <Image
