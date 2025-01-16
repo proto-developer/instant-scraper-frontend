@@ -6,9 +6,11 @@ import ScrapperComponent from "@/components/ui/ScrapperComponents";
 export default function RootLayout() {
   return (
     <>
-      <div className="w-[100%] min-h-[90%] md:min-h-[100%] max-h-screen flex flex-col py-4 justify-between">
+      <div className="w-[100%] min-h-[90%] md:min-h-[100%] max-h-screen flex flex-col py-4 ">
         {/* Top Content */}
-        <div className="processing w-[90%] md:w-[62%] 2xl:w-[50%] flex justify-center mt-5 md:mt-10">
+      <div className="flex h-[calc(100dvh-120px)] md:h-[calc(100dvh-50px)] flex-col justify-between">
+
+        <div className="processing w-[90%] sm:w-[85%] md:w-[80%] lg:w-[62%] 2xl:w-[50%] flex justify-center mt-5 md:mt-10">
           <div className="mainLogo flex h-8 mr-5">
             <Image src="/logo2.svg" alt="logo" width={32} height={5} className="sm:w-[32px]" />
           </div>
@@ -28,6 +30,7 @@ export default function RootLayout() {
         <div className="input w-[90%] md:w-[75%] mx-auto text-center">
           <InstructionInput />
           <ScrapperComponent.FooterNote />
+        </div>
         </div>
       </div>
     </>

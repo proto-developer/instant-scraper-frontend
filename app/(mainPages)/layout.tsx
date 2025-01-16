@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
