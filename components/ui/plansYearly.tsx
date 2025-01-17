@@ -28,8 +28,8 @@ const toggleDetails = (plan: Plan) => {
 
     return(
 
-    <div className="cards  w-[95%] grid gap-1 md:gap-5 
-  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ml-auto mr-auto mt-[3%] min-h-[75%] lg:min-h-[75%] xl:min-h-[60%]  md:bg-[#0D0C0C] rounded-lg">
+    <div className="cards  w-[95%] grid gap-1 md:gap-2 
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 ml-auto mr-auto mt-[3%] min-h-[75%] lg:min-h-[75%] xl:min-h-[60%]  lg:bg-[#0D0C0C] rounded-lg">
 
 <div className="card subscriptionPackages w-full  h-auto md:h-auto flex flex-col rounded-2xl group cursor-pointer md:cursor-default"  onClick={() => toggleDetails("basic")}>
   {/* Main Content */}
@@ -70,7 +70,7 @@ const toggleDetails = (plan: Plan) => {
         isDetailsVisible.basic ? 'flex' : 'hidden'
     }`}
   >
-    <ul className="max-w-md space-y-1 list-inside ">
+    <ul className="max-w-md space-y-1 list-inside mb-5">
       <li className="flex items-center text-[#D2D7D9] group-hover:text-white">
         <svg
           className="w-3 h-3.5 me-1 text-[#fff] md:text-[#575757] dark:text-grey-400 flex-shrink-0 group-hover:text-white"
@@ -107,18 +107,7 @@ const toggleDetails = (plan: Plan) => {
         </svg>
         Export Data in Excel Format
       </li>
-      <li className="flex items-center text-[#D2D7D9] group-hover:text-white">
-        <svg
-          className="w-3 h-3.5 me-1 text-[#fff] md:text-[#575757] dark:text-grey-400 flex-shrink-0 group-hover:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-        </svg>
-        Email Support
-      </li>
+      
     </ul>
   </div>
 
@@ -138,7 +127,7 @@ const toggleDetails = (plan: Plan) => {
   <div className="content mt-2 p-2 md:p-0 md:mt-5 ml-4 relative">
     <h3 className="md:font-semibold">Standard Plan</h3>
     <div className="price flex flex-row">
-      <h1 className="text-[40px] md:text-[35px] font-bold">$20</h1>
+      <h1 className="text-[40px] md:text-[35px] font-bold">$30</h1>
       <p className="text-[12px] md:text-[10px] text-[#868C92] ml-2 mt-3.5 leading-normal">
         Per month <br /> billed monthly
       </p>
@@ -172,7 +161,7 @@ const toggleDetails = (plan: Plan) => {
       isDetailsVisible.standard ? 'flex' : 'hidden'
     }`}
   >
-    <ul className="max-w-md space-y-1 list-inside ">
+    <ul className="max-w-md space-y-1 list-inside mb-5">
       <li className="flex items-center  text-[#D2D7D9] group-hover:text-white">
         <svg
           className="w-3 h-3.5 me-1  text-[#fff] md:text-[#575757] dark:text-grey-400 flex-shrink-0 group-hover:text-white"
@@ -262,7 +251,7 @@ const toggleDetails = (plan: Plan) => {
       isDetailsVisible.premium ? 'flex' : 'hidden'
     }`}
   >
-    <ul className="max-w-md space-y-1 list-inside ">
+    <ul className="max-w-md space-y-1 list-inside mb-5 ">
       <li className="flex items-center text-[#D2D7D9] group-hover:text-white">
         <svg
           className="w-3 h-3.5 me-1 text-[#fff] md:text-[#575757] dark:text-grey-400 flex-shrink-0 group-hover:text-white"
@@ -350,7 +339,7 @@ const toggleDetails = (plan: Plan) => {
       isDetailsVisible.enterprise ? 'flex' : 'hidden'
     }`}
   >
-    <ul className="max-w-md space-y-1 list-inside ">
+    <ul className="max-w-md space-y-1 list-inside mb-5">
       <li className="flex items-center text-[#D2D7D9] group-hover:text-white">
         <svg
           className="w-3 h-3.5 me-1 text-[#fff] md:text-[#575757] dark:text-grey-400 flex-shrink-0 group-hover:text-white"
