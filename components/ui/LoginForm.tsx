@@ -61,7 +61,7 @@ function AuthenticationForm(props: PaperProps) {
 
   return (
     <Paper bg="none" radius="md" p="xl" {...props}>
-      <p className="text-xl md:text-sm text-white">Sign in with Google</p>
+      <p className="text-lg md:text-sm xl:text-[14px] text-white">Sign in with Google</p>
 
       <Group grow mb="md" mt="md">
         <GoogleButton />
@@ -69,7 +69,7 @@ function AuthenticationForm(props: PaperProps) {
 
       <Divider color="grey" mt="lg" mb="lg" />
 
-      <p className="text-xl md:text-sm text-white mb-4">
+      <p className="text-lg md:text-sm text-white mb-4">
         Or continue with email address
       </p>
 
@@ -169,7 +169,7 @@ function AuthenticationForm(props: PaperProps) {
             type="submit"
             disabled={loading}
             
-            className={`continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF] ${
+            className={`continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-2 text-[18px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF] ${
               loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
 
@@ -180,7 +180,7 @@ function AuthenticationForm(props: PaperProps) {
 
           <a
             href="/signup"
-            className="text-[18px] md:text-[13px] text-center mt-3 md:mt-2 text-[#6F767E]"
+            className="text-[16px] md:text-[13px] text-center mt-3 md:mt-2 text-[#6F767E]"
           >
             Don't have an account? <b className="text-white"> Sign up</b>
           </a>

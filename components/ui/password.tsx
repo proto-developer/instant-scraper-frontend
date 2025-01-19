@@ -31,7 +31,7 @@ import {
     return (
       <Paper bg="none" radius="md" p="xl"  {...props}>
 
-        <p className="text-xl md:text-sm mb-[8%] text-white">Create a New Password</p>
+        <p className="text-lg md:text-sm mb-[8%] text-white">Create a New Password</p>
 
   
       
@@ -129,7 +129,7 @@ import {
 
     <button
         type="submit"
-        className="continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
+        className="continueButton sm:w-full bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-2 text-[18px] md:p-1.5 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
       >
         Continue
       </button>

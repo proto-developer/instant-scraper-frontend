@@ -27,7 +27,7 @@ import {
     return (
       <Paper bg="none" radius="md" p="xl"  {...props}>
 
-        <p className="text-xl md:text-sm text-white text-center">
+        <p className="text-lg md:text-sm text-white text-center">
         We just send you a verify code. <br/> Check your inbox to get them.
           </p>
 
@@ -41,7 +41,7 @@ import {
       
 
 
-            <PinInput size="lg" type="number" placeholder="0" className="pin-input-container" gap={isMobile ? 30 : 12}  styles={{input:{
+            <PinInput size="lg" type="number" placeholder="0" className="pin-input-container" gap={isMobile ? 25 : 12}  styles={{input:{
                 background: "#272B30",
                 border: "none",
                 color:"#fff",
@@ -59,7 +59,7 @@ import {
 
 <button
         type="submit"
-        className="continueButton sm:w-[full] mt-[25%] md:mt-[15%] bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-3 text-[20px] md:p-2 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
+        className="continueButton sm:w-[full] mt-[25%] lg:mt-[15%] bg-gradient-to-r from-[#0A84FF] to-[#5E5CE6] text-white border-none p-2 text-[18px] md:p-2 md:text-[15px] rounded-full transition-colors duration-300 hover:from-[#5E5CE6] hover:to-[#0A84FF]"
       >
         Continue
       </button>
