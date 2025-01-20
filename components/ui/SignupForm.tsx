@@ -18,7 +18,7 @@ import { upperFirst, useToggle } from "@mantine/hooks";
 import { GoogleButton } from "./GoogleButton";
 import { useState } from "react";
 
-function AuthenticationForm(props: PaperProps) {
+function SignupForm(props: PaperProps) {
   const [type, toggle] = useToggle(["login", "register"]);
   const [loading, setLoading] = useState(false); // Manage loading state
   const [error, setError] = useState<string | null>(null); // Manage error state
@@ -143,4 +143,4 @@ function AuthenticationForm(props: PaperProps) {
   );
 }
 
-export default AuthenticationForm;
+export default SignupForm;
