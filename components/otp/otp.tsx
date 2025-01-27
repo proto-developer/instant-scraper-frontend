@@ -1,4 +1,4 @@
-import OTP from '../ui/otp'
+import OTP from '../ui/SignupOTPForm'
 
 const SignUp = () => {
     return (

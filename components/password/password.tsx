@@ -1,4 +1,4 @@
-import Password from '../ui/password'
+import Password from '../ui/SignupPasswordForm'
 const SignUp = () => {
     return (
       <div className="w-[100%] md:w-[90%] lg:w-[50%]">

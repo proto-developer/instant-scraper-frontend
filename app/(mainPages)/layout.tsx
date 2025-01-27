@@ -5,29 +5,11 @@ import Sidebar from "@/components/sidebar/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
 import ProfileMenu from "@/components/ui/ProfileMenu";
+import axios from "axios";
+import { getSession } from "next-auth/react";
 
-const RecenetRequestsData = [
-  {
-    requestId: "1",
-    requestTitle: "Find me the best laptops in the world today",
-  },
-  {
-    requestId: "2",
-    requestTitle: "Find me the best laptops in the world today",
-  },
-  {
-    requestId: "3",
-    requestTitle: "Find me the best laptops in the world today",
-  },
-  {
-    requestId: "4",
-    requestTitle: "Find me the best laptops in the world today",
-  },
-  {
-    requestId: "5",
-    requestTitle: "Find me the best laptops in the world today",
-  },
-];
+
+const session = await getSession(); // Top-level await
 
 export default function RootLayout({
   children,
@@ -35,6 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  // const { data: session } = useSession();
+  const [recentRequestsData, setRecentRequestsData] = useState<
+    { requestId: string; requestTitle: string }[]
+  >([]);
+
+  // const [recentRequestsData, setRecentRequestsData] = useState<string[]>([]);
+
 
   const toggleSidebar = () => {
     setSidebarOpen((prevState) => {
@@ -43,6 +32,58 @@ export default function RootLayout({
       return newState;
     });
   };
+
+  // Fetch data from backend API
+  useEffect(() => {
+    const fetchRecentRequests = async () => {
+
+      const token = localStorage.getItem('authToken');
+      const tokenGoogle = session?.user?.access_token;
+
+      console.log("Access token:", tokenGoogle);
+      console.log("token: " , token)
+      
+
+
+      try {
+        const response = await axios.get("http://74.50.88.184:8002/api/scraper/chat_list", {
+          withCredentials: true, 
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token||tokenGoogle}`,
+          },
+        }); 
+      
+        console.log("Chat list ----------");
+        console.log(response);
+      
+        if (response.status === 200) {
+          const data = response.data; // Axios automatically parses the JSON
+          // setRecentRequestsData(data); // Set the data to state
+
+          // const chatIds = data.chats.map((chat: { _id: string }) => chat._id);
+          const chats = data.chats.map((chat: { _id: string; title: string }) => ({
+            requestId: chat._id,
+            requestTitle: chat.chatName,
+          }));
+
+          console.log(chats)
+          setRecentRequestsData(chats);
+
+        } else {
+          throw new Error("Failed to fetch data");
+        }
+      } catch (error) {
+        console.error(
+          "Error fetching recent requests:",
+          error.response?.data?.message || error.message || "Unexpected error occurred"
+        );
+      }
+      
+    };
+
+    fetchRecentRequests(); // Call the function to fetch data
+  }, []); // Empty dependency array ensures the API call is made once on mount
 
   return (
     <>
@@ -57,18 +98,19 @@ export default function RootLayout({
             {/* Logo visible in the sidebar on medium and larger screens */}
             <div className="hidden sm:block">
               <Link href={"/"}>
-                <Image src="/logo.svg" alt="logo" width={170} height={40} />
+                <Image src="/logoF.svg" alt="logo" width={200} height={40} />
               </Link>
             </div>
 
             <Sidebar.RecentRequestsContainer>
-              {RecenetRequestsData.map((request) => (
-                <Sidebar.RecentRequestCard
-                  key={request.requestId}
-                  requestId={request.requestId}
-                  requestTitle={request.requestTitle}
-                />
-              ))}
+            {recentRequestsData.map((id) => (
+              <Sidebar.RecentRequestCard
+                key={id.requestId}
+                requestId={id.requestId} // Use _id as requestId
+                requestTitle={`${id.requestTitle}`} // Optional: Display chat ID as title, modify as per your need
+              />
+            ))}
+
             </Sidebar.RecentRequestsContainer>
             <Sidebar.SidebarFooter />
 
@@ -107,7 +149,7 @@ export default function RootLayout({
           {/* Logo */}
           <div>
             <Link href={"/"}>
-              <Image src="/logo.svg" alt="logo" width={180} height={40} />
+              <Image src="/logoF.svg" alt="logo" width={190} height={40} />
             </Link>
           </div>
 
@@ -127,7 +169,7 @@ export default function RootLayout({
               <ProfileMenu />
             </div>
           )}
-        </div>  
+        </div>
       </div>
     </>
   );

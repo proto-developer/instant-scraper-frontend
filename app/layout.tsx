@@ -1,13 +1,15 @@
+// app/layout.tsx
+
 import type { Metadata } from "next";
 import "./globals.css";
 import "@mantine/core/styles.css";
-import '@mantine/carousel/styles.css';
-import { MantineProvider } from "@mantine/core";
+import "@mantine/carousel/styles.css";
 import { Inter } from "next/font/google";
+import ClientLayout from "@/components/ClientLayout"; // Import the ClientLayout component
 
 const inter = Inter({
-  subsets: ['latin'], // Add the subsets you need, here we use 'latin'
-  variable: "--font-inter", // Continue using the variable if you need it
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <MantineProvider>{children}</MantineProvider>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );

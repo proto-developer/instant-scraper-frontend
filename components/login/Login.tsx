@@ -1,4 +1,4 @@
-import  AuthenticationForm from "../ui/LoginForm"
+import  AuthenticationForm from "../ui/SignInForm"
 const Login = () => {
     return (
       <div className="w-[100%] md:w-[90%] lg:w-[50%]">

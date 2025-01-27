@@ -1,4 +1,4 @@
-import SignUpComponent from '../ui/SignupForm'
+import SignUpComponent from '../ui/SignupEmailForm'
 
 const SignUp = () => {
     return (

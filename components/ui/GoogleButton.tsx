@@ -30,31 +30,10 @@ function GoogleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function GoogleButton(props: React.ComponentPropsWithoutRef<'button'>) {
-  const handleGoogleSignIn = async () => {
-    try {
-      console.log("Attempting to sign in with Google...");
-
-      console.log("GOOGLE_CLIENT_ID:", process.env.GOOGLE_CLIENT_ID);
-      console.log("GOOGLE_CLIENT_SECRET:", process.env.GOOGLE_CLIENT_SECRET);
-      console.log("NEXTAUTH_URL:", process.env.NEXTAUTH_URL);
-
-      setTimeout(async () => {
-
-        signIn("google", {
-          callbackUrl: "http://localhost:3000",  // Adjust as necessary
-        });
-
-      }, 1000);
-
-      
-    } catch (error) {
-      console.error("Error during sign-in:", error);
-    }
-  };
+  
 
   return (
     <button
-      onClick={handleGoogleSignIn}
       className="flex items-center h-11 md:h-9 justify-center w-full sm:w-2/3 md:w-1/2 lg:w-1/3 py-3 px-4 text-xl md:text-base bg-black text-white border border-opacity-1 rounded-xl md:rounded-md hover:bg-[#1C1C1E] transition-all"
       {...props}
     >

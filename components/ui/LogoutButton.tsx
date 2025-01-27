@@ -1,16 +1,19 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import {signOut} from "next-auth/react";
+
 import Image from 'next/image';
 
 const LogoutButton = () => {
   const router = useRouter();
 
   const handleLogout = () => {
-    // Add any logout logic here (e.g., clearing session or tokens)
-
-    // Redirect to the login page
-    router.push('/login');
+    localStorage.removeItem('authToken');
+    signOut({
+      callbackUrl: "/login"
+    });
+    
   };
 
   return (

@@ -7,8 +7,9 @@ const SignUpPage = () => {
   return (
     <div className="flex h-screen">
       {/* Left Box */}
-      <div className="leftBox p-[32px_16px] h-full flex flex-col items-center justify-center gap-[34px] flex-1">
-        <Image src="/logo.svg" alt="logo" width={170} height={40} className="w-[160px] md:w-[170px] lg:w-[170px]"/>
+      <div className="leftBox p-[32px_16px] h-full flex flex-col items-center justify-center gap-[20px] flex-1">
+        <Image src="/logoF.svg" alt="logo" width={170} height={40} className="w-[180px] md:w-[190px] lg:w-[200px]"/>
+        
         <SignUp />
       </div>
 

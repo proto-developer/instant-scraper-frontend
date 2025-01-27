@@ -34,9 +34,9 @@ export default function ProfileMenu() {
         onClick={toggleMenu}
       >
         <img
-          src="/Avatar.png" // Replace with your profile image path
+          src="/user.png" 
           alt="Profile"
-          className="w-full h-full object-cover"
+          className="w-[60px] h-[50px] object-cover"
         />
       </button>
 
