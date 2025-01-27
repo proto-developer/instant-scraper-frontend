@@ -34,17 +34,32 @@ export default function ProcessingPage() {
         setLoading(true);
 
         // Step 1: Call the first API
-        const response1 = await fetch(
-          `http://74.50.88.184:8000/get_answer?url=${encodeURIComponent(
-            url
-          )}&query=${encodeURIComponent(query)}&scraper=scraper1`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        // const response1 = await fetch(
+        //   `http://74.50.88.184:8000/get_answer?url=${encodeURIComponent(
+        //     url
+        //   )}&query=${encodeURIComponent(query)}&scraper=scraper1`,
+        //   {
+        //     method: "GET",
+        //     headers: {
+        //       Authorization: `Bearer ${token}`,
+        //     },
+        //   }
+        // );
+
+
+        const response1 = await fetch("http://74.50.88.184:8002/api/scraper/get_answer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json", // Ensures the payload is sent as JSON
+            Authorization: `Bearer ${token}`, // Include token in Authorization header
+          },
+          body: JSON.stringify({
+            url: url, // Send the URL in the payload
+            query: query, // Send the query in the payload
+            scraper: "scraper1", // Send the scraper name in the payload
+          }),
+        });
+        
 
         setScrappingDataState("tick");
 
@@ -53,8 +68,13 @@ export default function ProcessingPage() {
           throw new Error("Failed to fetch data from the first API.");
         }
 
+
         const result1 = await response1.json();
+        const result1Data = result1.message;
+
         console.log("Response1:", result1);
+        console.log("Response1 Result:", result1Data);
+
 
         // Mark ScrappingData as complete
 
@@ -64,7 +84,7 @@ export default function ProcessingPage() {
 
         const response2 = await fetch(
           `http://74.50.88.184:8000/get_excel?output_response=${encodeURIComponent(
-            JSON.stringify(result1)
+            JSON.stringify(result1Data)
           )}`,
           {
             method: "GET", // Use GET

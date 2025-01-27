@@ -62,7 +62,7 @@ export default function RootLayout({
           // setRecentRequestsData(data); // Set the data to state
 
           // const chatIds = data.chats.map((chat: { _id: string }) => chat._id);
-          const chats = data.chats.map((chat: { _id: string; title: string }) => ({
+          const chats = data.chats.map((chat: { _id: string; chatName: string }) => ({
             requestId: chat._id,
             requestTitle: chat.chatName,
           }));
@@ -74,9 +74,10 @@ export default function RootLayout({
           throw new Error("Failed to fetch data");
         }
       } catch (error) {
+        const typedError = error as Error; 
         console.error(
           "Error fetching recent requests:",
-          error.response?.data?.message || error.message || "Unexpected error occurred"
+          typedError.message || "Unexpected error occurred"
         );
       }
       

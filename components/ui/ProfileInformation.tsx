@@ -5,8 +5,11 @@ import { useUserContext } from "../context/UserContext"; // Import useUserContex
 const ProfileInformation = () => {
 
   const { data: session } = useSession();
-  const { user } = useUserContext(); // Destructure context values
-
+  // const { user } = useUserContext(); // Destructure context values
+  const sessionUser = localStorage.getItem("user");
+  const user = sessionUser ? JSON.parse(sessionUser) : null;
+  console.log("user: " , user)
+    
 
     return(
 
@@ -18,9 +21,9 @@ const ProfileInformation = () => {
 
             <h4 className='text-[17px] md:text-sm mb-3'>Display Name</h4>
           
-
+      
             <input
-              placeholder={session?.user?.name || user?.firstName}
+              placeholder={session?.user?.name || user.firstName}
               className="bg-[#282829] text-white rounded-lg p-[2%_3%] md:p-[1.5%_3%] w-full"
             />
 
